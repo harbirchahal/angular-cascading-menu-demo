@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './shared';
+import { AppStoreModule } from './store';
 import { AppComponent } from './app.component';
 import {
   NavigationComponent,
@@ -14,6 +15,7 @@ import {
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
+    AppStoreModule,
   ],
   declarations: [
     AppComponent,
