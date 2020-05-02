@@ -5,6 +5,7 @@ import { EffectsModule } from '@ngrx/effects';
 
 import { FacetApiService } from './services';
 import { FEATURE_KEY, FacetEffects, facetReducer } from './store';
+import { FacetStoreFacade } from './facet.facade';
 
 @NgModule({
   imports: [
@@ -14,6 +15,7 @@ import { FEATURE_KEY, FacetEffects, facetReducer } from './store';
   ],
   providers: [
     FacetApiService,
+    FacetStoreFacade,
   ],
 })
 export class FacetModule { }

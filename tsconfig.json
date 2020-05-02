@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@app/facet": [
+        "src/app/+facet/index.ts"
+      ],
+      "@app/facet/model": [
+        "src/app/+facet/model/index.ts"
+      ]
+    }
   }
 }
