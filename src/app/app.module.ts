@@ -4,11 +4,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MaterialModule } from './shared';
 import { AppStoreModule } from './store';
+import { FacetModule } from './+facet'; // Feature
 import { AppComponent } from './app.component';
-import {
-  NavigationComponent,
-  ExploreNavComponent,
-} from './navigation';
+import { NavigationComponent, ExploreNavComponent } from './navigation';
 
 @NgModule({
   imports: [
@@ -16,6 +14,7 @@ import {
     BrowserAnimationsModule,
     MaterialModule,
     AppStoreModule,
+    FacetModule,
   ],
   declarations: [
     AppComponent,
