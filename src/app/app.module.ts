@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { FacetModule } from '@app/facet'; // Feature
+// Comment to make it work in Stackblitz
+// import { FacetModule } from '@app/facet';
+import { FacetModule } from './+facet'; // Feature
 import { MaterialModule } from './shared';
 import { AppStoreModule } from './store';
 import { AppComponent } from './app.component';

@@ -1,5 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { FacetStoreFacade } from '@app/facet';
+// Comment to make it work in Stackblitz
+// import { FacetStoreFacade } from '@app/facet';
+import { FacetStoreFacade } from '../../+facet';
 
 @Component({
   selector: 'explore-nav',
