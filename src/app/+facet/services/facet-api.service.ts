@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { delay } from 'rxjs/operators';
+import * as fp from 'lodash/fp';
+import { map } from 'rxjs/operators';
 import { User, Album } from '../model';
 
 @Injectable()
@@ -11,7 +12,8 @@ export class FacetApiService {
   constructor(private http: HttpClient) { }
 
   getUsers() {
-    return this.http.get<User[]>(this.usersUrl());
+    return this.http.get<User[]>(this.usersUrl()).pipe(
+      map(fp.map(fp.pick(['id', 'name', 'email']))));
   }
 
   getUserAlbums(id: number) {
