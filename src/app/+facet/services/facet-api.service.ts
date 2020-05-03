@@ -4,10 +4,13 @@ import * as fp from 'lodash/fp';
 import { map } from 'rxjs/operators';
 import { User, Album } from '../model';
 
+const apiUrl = 'https://jsonplaceholder.typicode.com';
+
 @Injectable()
 export class FacetApiService {
-  readonly usersUrl = () => '/api/users';
-  readonly userAlbumsUrl = (id: number) => `/api/users/${id}/albums`;
+  readonly usersUrl = () => `${apiUrl}/users`;
+  readonly userAlbumsUrl = (id: number) =>
+    `${apiUrl}/users/${id}/albums`;
 
   constructor(private http: HttpClient) { }
 
